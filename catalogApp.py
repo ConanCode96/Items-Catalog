@@ -186,7 +186,10 @@ def login():
             string.ascii_lowercase + string.digits)
         for x in range(64))
     login_session['state'] = STATE
-    return render_template("G_login_page.html", state=STATE, client_id=CLIENT_ID)
+    return render_template("G_login_page.html",
+                           state=STATE,
+                           client_id=CLIENT_ID
+                           )
 
 
 # Logs out the currently logged-in user.
@@ -223,7 +226,8 @@ def gconnect():
     code = request.data
     try:
         # Upgrade the authorization code into a credentials object!
-        oauth_flow = flow_from_clientsecrets('Google_client_secrets.json', scope='')
+        oauth_flow = flow_from_clientsecrets('Google_client_secrets.json',
+                                             scope='')
         oauth_flow.redirect_uri = 'postmessage'
         credentials = oauth_flow.step2_exchange(code)
     except FlowExchangeError:
@@ -419,7 +423,7 @@ def add_item():
         # Check if the item already exists in the database.
         # If it does, display an error.
         item = db_session.query(Item).\
-        filter_by(name=request.form['name']).first()
+                filter_by(name=request.form['name']).first()
         if item:
             if item.name == request.form['name']:
                 flash('This item already exists in the database!')
@@ -439,8 +443,8 @@ def add_item():
     else:
         items = db_session.query(Item). \
             filter_by(user_id=login_session['user_id']).all()
-        categories = db_session.query(Category). \
-            filter_by(user_id=login_session['user_id']).all()
+        categories = db_session.query(Category).all()
+        # filter_by(user_id=login_session['user_id'])
         return render_template(
             'new_item_form.html',
             items=items,
@@ -564,7 +568,7 @@ def add_item_by_category(category_id):
         # Check if the item already exists in the database.
         # If it does, display an error.
         item = db_session.query(Item).\
-        filter_by(name=request.form['name']).first()
+                filter_by(name=request.form['name']).first()
         if item:
             if item.name == request.form['name']:
                 flash('The item already exists in the database!')
@@ -581,7 +585,8 @@ def add_item_by_category(category_id):
                                 category_id=category_id))
     else:
         category = db_session.query(Category).filter_by(id=category_id).first()
-        return render_template('new_item_predefined_category_form.html', category=category)
+        return render_template('new_item_predefined_category_form.html',
+                               category=category)
 
 
 if __name__ == "__main__":
