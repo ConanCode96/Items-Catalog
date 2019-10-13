@@ -87,4 +87,5 @@ Modern web applications perform a variety of functions and provide amazing featu
 ## TroubleShooting
 In case the app doesn't run, follow the following possible solutions:
 - Make sure you have `python3.6` installed along with the requirements in **step 10**
+- Feeling stuck? Follow this [tutorial](https://www.rosehosting.com/blog/how-to-install-python-3-6-on-ubuntu-16-04/) to install `python3.6`
 - Open an issue ASAP, I will see to it within one day at most, Cheers! :grin:
