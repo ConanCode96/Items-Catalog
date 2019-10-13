@@ -18,6 +18,7 @@ Modern web applications perform a variety of functions and provide amazing featu
 * [Vagrant](https://www.vagrantup.com/downloads.html)
 * [Git](https://git-scm.com/download)
 * [Python 3.6](https://www.python.org/downloads/)
+* [Pip 3.6](https://pip.pypa.io/en/stable/installing/)
 * [SQLAlchemy](https://github.com/sqlalchemy/sqlalchemy/)
 
 ## Steps to reproduce
