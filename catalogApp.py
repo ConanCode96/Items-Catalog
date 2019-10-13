@@ -443,8 +443,8 @@ def add_item():
     else:
         items = db_session.query(Item). \
             filter_by(user_id=login_session['user_id']).all()
-        categories = db_session.query(Category).all()
-        # filter_by(user_id=login_session['user_id'])
+        categories = db_session.query(Category). \
+            filter_by(user_id=login_session['user_id']).all()
         return render_template(
             'new_item_form.html',
             items=items,
