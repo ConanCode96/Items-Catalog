@@ -60,13 +60,13 @@ Modern web applications perform a variety of functions and provide amazing featu
     ```
 14. Open `http://localhost:8000/` in your Web browser and wonder :grin:
 
-# Category Routers
+## Category Routers
 
 * `@app.route("/catalog/category/new/", methods=['GET', 'POST'])` Adds a Category
 * `@app.route('/catalog/category/<int:category_id>/edit/', methods=['GET', 'POST'])` Edits a specific Category
 * `@app.route('/catalog/category/<int:category_id>/delete/', methods=['GET', 'POST'])` Deletes a specific Category
 
-# Item Routers
+## Item Routers
 
 * `@app.route("/catalog/item/new/", methods=['GET', 'POST'])` - Creates new item from scratch
 * `@app.route("/catalog/category/<int:category_id>/item/new/", methods=['GET', 'POST'])` - Creates a new item given a specific category 
@@ -75,17 +75,17 @@ Modern web applications perform a variety of functions and provide amazing featu
 * `@app.route("/catalog/item/<int:item_id>/delete/", methods=['GET', 'POST'])` - Deletes a given item
 * `@app.route('/catalog/category/<int:category_id>/items/')` - Lists all items for a given category
 
-# JSON Endpoints
+## JSON Endpoints
 * **`/api/v1/categories/JSON`** Returns a JSON of all the categories in the catalog.
 * **`/api/v1/catalog/JSON`** Return a JSON of all the items in the catalog.
 * **`/api/v1/categories/<int:category_id>/item/<int:item_id>/JSON`** Return a JSON of a particular item in the catalog.
 
-# Tests
+## Tests
 - [x] PEP 8 Compatible code
 - [x] Accessing endpoints that require authorization without so produces a useful message about the invalid request along with redirection to the suitable resource (most probably homepage)
 
 ## TroubleShooting
 In case the app doesn't run, follow the following possible solutions:
 - Make sure you have `python3.6` installed along with the requirements in **step 10**
-- Feeling stuck? Follow this [tutorial](https://www.rosehosting.com/blog/how-to-install-python-3-6-on-ubuntu-16-04/) to install `python3.6`
+- Feeling stuck? Follow this [tutorial](https://www.rosehosting.com/blog/how-to-install-python-3-6-on-ubuntu-16-04/) to install `python3.6` on `Ubuntu 16.04`
 - Open an issue ASAP, I will see to it within one day at most, Cheers! :grin:
