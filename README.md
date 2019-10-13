@@ -41,7 +41,7 @@ Modern web applications perform a variety of functions and provide amazing featu
 
 9) Install or upgrade Flask:
     ```bash
-    sudo python3.6 -m pip3.6 install --upgrade flask
+    sudo python3.6 -m pip install --upgrade flask
     ```
 10) Run the `requirements.txt` file to install any other dependency package not properly installed 
     ```bash
