@@ -40,9 +40,18 @@ Modern web applications perform a variety of functions and provide amazing featu
 
 8) Download or clone this repository, and navigate to it.
 
-9) Install or upgrade Flask:
+9) Install or upgrade Python 3.6 / Pip 3.6:
     ```bash
-    sudo python3.6 -m pip install --upgrade flask
+    apt-get install software-properties-common python-software-properties
+    sudo add-apt-repository ppa:jonathonf/python-3.6
+    apt-get update
+    apt-get install python3.6
+    python3.6 -V
+    
+    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+    python get-pip.py --user
+    sudo pip3.6 install -upgrade pip
+    pip -V
     ```
 10) Run the `requirements.txt` file to install any other dependency package not properly installed 
     ```bash
