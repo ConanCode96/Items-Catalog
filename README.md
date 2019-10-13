@@ -41,23 +41,23 @@ Modern web applications perform a variety of functions and provide amazing featu
 
 9) Install or upgrade Flask:
     ```bash
-    sudo python3 -m pip install --upgrade flask
+    sudo python3.6 -m pip3.6 install --upgrade flask
     ```
 10) Run the `requirements.txt` file to install any other dependency package not properly installed 
     ```bash
-    sudo pip install -r requirements.txt
+    sudo pip3.6 install -r requirements.txt
     ```
 11. Set up the database schema running:
     ```bash
-    python3 DB_setup.py
+    python3.6 DB_setup.py
     ```
 12. Insert fake data to jump-start the app with some data
     ```bash
-    python3 dummy_data.py
+    python3.6 dummy_data.py
     ```
 13. Run this application:
     ```bash
-    python3 catalogApp.py
+    python3.6 catalogApp.py
     ```
 14. Open `http://localhost:8000/` in your Web browser and wonder :grin:
 
