@@ -17,12 +17,9 @@ from flask import make_response, flash
 from flask import session as login_session
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from DB_setup import User, Item, Category
+from DB_setup import User, Item, Category, PATH
 from oauth2client.client import FlowExchangeError
 from oauth2client.client import flow_from_clientsecrets
-
-
-PATH = '/var/www/FlaskApp/FlaskApp/'
 
 
 # Main Flask app object

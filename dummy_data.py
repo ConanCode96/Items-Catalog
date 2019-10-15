@@ -1,7 +1,7 @@
 from DB_setup import Item, User, Category
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from catalogApp import PATH
+from DB_setup import PATH
 
 # creating an engine to the SQL database
 engine = create_engine('sqlite:///' + PATH + 'ItemCatalogDB.db',

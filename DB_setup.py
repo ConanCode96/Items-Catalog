@@ -2,7 +2,6 @@
 
 # Setting up our DataBase
 
-from catalogApp import PATH
 from sqlalchemy import create_engine
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
@@ -10,6 +9,9 @@ from sqlalchemy import Integer, String, Column, ForeignKey
 
 # Base for Declaring Entities/RelationShips
 BASE = declarative_base()
+
+
+PATH = '/var/www/FlaskApp/FlaskApp/'
 
 
 # Base Class/Entity/Schema for a User
