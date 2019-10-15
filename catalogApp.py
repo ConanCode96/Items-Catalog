@@ -25,6 +25,8 @@ from oauth2client.client import flow_from_clientsecrets
 # Main Flask app object
 app = Flask(__name__)
 
+app.secret_key = 'super_secret_key_hehe_XD'
+
 
 # Load the Google Sign-in API Client ID from clinet_secrets JSON.
 CLIENT_ID = json.loads(
@@ -590,7 +592,5 @@ def add_item_by_category(category_id):
 
 
 if __name__ == "__main__":
-    app.secret_key = 'super_secret_key_hehe_XD'
     app.debug = True
     app.run(host='0.0.0.0', port=80)
-    # app.run(host="0.0.0.0", port=8000, debug=True)
