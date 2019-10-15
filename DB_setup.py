@@ -2,6 +2,7 @@
 
 # Setting up our DataBase
 
+from catalogApp import PATH
 from sqlalchemy import create_engine
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
@@ -76,7 +77,7 @@ class Item(BASE):
 
 
 # create the db engine
-engine = create_engine('sqlite:////var/www/FlaskApp/FlaskApp/ItemCatalogDB.db')
+engine = create_engine('sqlite:///' + PATH + 'ItemCatalogDB.db')
 
 # Create all Schemas/Entities as metadata
 BASE.metadata.create_all(engine)

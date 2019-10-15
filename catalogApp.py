@@ -22,17 +22,20 @@ from oauth2client.client import FlowExchangeError
 from oauth2client.client import flow_from_clientsecrets
 
 
+PATH = '/var/www/FlaskApp/FlaskApp/'
+
+
 # Main Flask app object
 app = Flask(__name__)
 
 
 # Load the Google Sign-in API Client ID from clinet_secrets JSON.
 CLIENT_ID = json.loads(
-    open('Google_client_secrets.json', 'r').read())['web']['client_id']
+    open(PATH + 'Google_client_secrets.json', 'r').read())['web']['client_id']
 
 
 # Connect to the database and create a database session.
-db_engine = create_engine('sqlite:////var/www/FlaskApp/FlaskApp/ItemCatalogDB.db',
+db_engine = create_engine('sqlite:///' + PATH + 'ItemCatalogDB.db',
                           connect_args={'check_same_thread': False})
 
 
@@ -226,7 +229,7 @@ def gconnect():
     code = request.data
     try:
         # Upgrade the authorization code into a credentials object!
-        oauth_flow = flow_from_clientsecrets('Google_client_secrets.json',
+        oauth_flow = flow_from_clientsecrets(PATH + 'Google_client_secrets.json',
                                              scope='')
         oauth_flow.redirect_uri = 'postmessage'
         credentials = oauth_flow.step2_exchange(code)
