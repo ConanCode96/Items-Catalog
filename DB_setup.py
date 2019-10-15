@@ -76,7 +76,7 @@ class Item(BASE):
 
 
 # create the db engine
-engine = create_engine('sqlite:///ItemCatalogDB.db')
+engine = create_engine('sqlite:////var/www/FlaskApp/FlaskApp/ItemCatalogDB.db')
 
 # Create all Schemas/Entities as metadata
 BASE.metadata.create_all(engine)

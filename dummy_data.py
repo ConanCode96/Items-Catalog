@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 # creating an engine to the SQL database
-engine = create_engine('sqlite:///ItemCatalogDB.db',
+engine = create_engine('sqlite:////var/www/FlaskApp/FlaskApp/ItemCatalogDB.db',
                        connect_args={'check_same_thread': False})
 
 # Bind the db engine to a session to interact with the database.

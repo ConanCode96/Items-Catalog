@@ -32,7 +32,7 @@ CLIENT_ID = json.loads(
 
 
 # Connect to the database and create a database session.
-db_engine = create_engine('sqlite:///ItemCatalogDB.db',
+db_engine = create_engine('sqlite:////var/www/FlaskApp/FlaskApp/ItemCatalogDB.db',
                           connect_args={'check_same_thread': False})
 
 
@@ -592,5 +592,5 @@ def add_item_by_category(category_id):
 if __name__ == "__main__":
     app.secret_key = 'super_secret_key_hehe_XD'
     app.debug = True
-    app.run(host='0.0.0.0', port=8000)
+    app.run(host='0.0.0.0', port=80)
     # app.run(host="0.0.0.0", port=8000, debug=True)
