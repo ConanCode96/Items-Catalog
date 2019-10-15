@@ -17,9 +17,12 @@ from flask import make_response, flash
 from flask import session as login_session
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from DB_setup import User, Item, Category, PATH
+from DB_setup import User, Item, Category
 from oauth2client.client import FlowExchangeError
 from oauth2client.client import flow_from_clientsecrets
+
+
+PATH = '/var/www/FlaskApp/FlaskApp/'
 
 
 # Main Flask app object
@@ -592,5 +595,7 @@ def add_item_by_category(category_id):
 
 
 if __name__ == "__main__":
+    app.secret_key = 'super_secret_key_hehe_XD'
     app.debug = True
     app.run(host='0.0.0.0', port=80)
+    # app.run(host="0.0.0.0", port=8000, debug=True)
