@@ -42,14 +42,14 @@ Modern web applications perform a variety of functions and provide amazing featu
 
 9) Install or upgrade Python 3.6 / Pip 3.6:
     ```bash
-    apt-get install software-properties-common python-software-properties
+    sudo apt-get install software-properties-common python-software-properties
     sudo add-apt-repository ppa:jonathonf/python-3.6
     apt-get update
     apt-get install python3.6
     python3.6 -V
     
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-    python get-pip.py --user
+    python3.6 get-pip.py --user
     sudo pip3.6 install -upgrade pip
     pip -V
     ```
